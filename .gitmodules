@@ -1,0 +1,11 @@
+[submodule "server"]
+	path = chess_server
+	url = git@github.com:kesquerra/network_chess_server.git
+
+[submodule "client"]
+	path = chess_client
+	url = git@github.com:kesquerra/network_chess_client.git
+
+[submodule "lib"]
+	path = chess_lib
+	url = git@github.com:kesquerra/network_chess_lib.git
