@@ -86,7 +86,6 @@ struct Packet {
 | SendMove | 0x0B |
 | SendMoveResp | 0x0C |
 | RecvMove | 0x0D |
-| SendMsg | 0x0E |
 | ShowGame | 0x0F |
 | ShowGameResp | 0x10 |
 
@@ -139,6 +138,64 @@ Must be sent at least once every 5 seconds by both client and server
 to notify the other party that they are still connected.
 
 Connection will be terminated upon missing 5 keep alive check-ins.
+
+
+### Join Messages
+```
+Packet {
+    opcode: 0x02,
+    length: variable,
+    payload: [(username in bytes)]
+}
+```
+### ListGames Messages
+```
+Packet {
+    opcode: 0x03,
+    length: 0,
+    payload: []
+}
+```
+### CreateGame Messages
+```
+Packet {
+    opcode: 0x05,
+    length: 0,
+    payload: []
+}
+```
+### JoinGame Messages
+```
+Packet {
+    opcode: 0x07,
+    length: 4,
+    payload: [(id of game in bytes)]
+}
+```
+### LeaveGame Messages
+```
+Packet {
+    opcode: 0x09,
+    length: 0,
+    payload: []
+}
+```
+### SendMove Messages
+```
+Packet {
+    opcode: 0x0B,
+    length: 8,
+    payload: [(move in bytes)]
+}
+```
+### ShowGame Messages
+```
+Packet {
+    opcode: 0x0F,
+    length: 0,
+    payload: []
+}
+```
 
 ## Authors
 Kyle Esquerra [<img style|"width: 20px" alt|"Github URL" src|"https://raw.githubusercontent.com/gilbarbara/logos/1f372be75689d73cae89b6de808149b606b879e1/logos/github-icon.svg">](https://github.com/kesquerra)
