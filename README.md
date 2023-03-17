@@ -18,8 +18,8 @@ system for the Internetworking Protocols class at Portland State University.
    3.1. [Message Format][msg-format] \
    3.2. [Field Definitions][field-def] \
    3.3. [Operation Codes][op-codes] \
-   3.4. [Error Messages][err-msgs] \
-   3.5 [Keepalive Messages][keepalive-msgs]
+   3.4. [Error Messages][err-msgs]
+4. [Messages][messages]
 
 
 
@@ -121,9 +121,10 @@ be considiered terminated.
 | MalformedPacket | 0x0A |
 | InvalidAccess | 0x0B |
 
+## Messages
+[messages]: #messages
 ---
 ### Keep Alive Messages
-[keepalive-msgs]: #keepalive-messages
 ```
 Packet {
     opcode: 0x01,
@@ -132,7 +133,6 @@ Packet {
 }
 ```
 ### Usage
-[keepalive-usage]: #keepalive-usage
 Provides an application-layer notification of a disconnected peer. 
 Must be sent at least once every 5 seconds by both client and server 
 to notify the other party that they are still connected.
