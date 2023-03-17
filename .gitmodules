@@ -3,7 +3,7 @@
 	url = https://github.com/kesquerra/network_chess_client
 [submodule "chess_server"]
 	path = chess_server
-	url = ./chess_server
+	url = https://github.com/kesquerra/network_chess_server
 [submodule "chess_lib"]
 	path = chess_lib
-	url = ./chess_lib
+	url = https://github.com/kesquerra/network_chess_lib
