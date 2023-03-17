@@ -5,6 +5,12 @@ Expires: April 2023
 
 <h1 style|"text-align: center;">Networked Chess Class Project</h1>
 
+
+[Networked Chess Repository](https://github.com/kesquerra/network_chess)
+- [Lib](https://github.com/kesquerra/network_chess_lib)
+- [Client](https://github.com/kesquerra/network_chess_client)
+- [Server](https://github.com/kesquerra/network_chess_server)
+
 ## Summary
 [summary]: #summary
 
