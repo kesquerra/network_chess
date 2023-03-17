@@ -1,6 +1,6 @@
 [submodule "chess_client"]
 	path = chess_client
-	url = ./chess_client
+	url = https://github.com/kesquerra/network_chess_client
 [submodule "chess_server"]
 	path = chess_server
 	url = ./chess_server
