@@ -3,7 +3,7 @@ Internet Draft \
 Intended Status: Chess Class Project Specification \
 Expires: April 2023
 
-<h1 style="text-align: center;">Networked Chess Class Project</h1>
+<h1 style|"text-align: center;">Networked Chess Class Project</h1>
 
 ## Summary
 [summary]: #summary
@@ -72,17 +72,23 @@ struct Packet {
 
 | Op Code | Byte Value |
 |---------|------------|
-| CHESS_OPCODE_ERR | 0x00 |
-| CHESS_OPCODE_KEEPALIVE | 0x01 |
-| CHESS_OPCODE_JOIN | 0x02 |
-| CHESS_OPCODE_LIST_GAMES | 0x03 |
-| CHESS_OPCODE_LIST_GAMES_RESP | 0x04 |
-| CHESS_OPCODE_CREATE_GAME | 0x05 |
-| CHESS_OPCODE_JOIN_GAME | 0x06 |
-| CHESS_OPCODE_LEAVE_GAME | 0x07 |
-| CHESS_OPCODE_SEND_MOVE | 0x08 |
-| CHESS_OPCODE_RECV_MOVE | 0x09 |
-| CHESS_OPCODE_SEND_MSG | 0x0A |
+| Err | 0x00 |
+| KeepAlive | 0x01 |
+| Join | 0x02 |
+| ListGames | 0x03 |
+| ListGamesResp | 0x04 |
+| CreateGame | 0x05 |
+| CreateGameResp | 0x06 |
+| JoinGame | 0x07 |
+| JoinGameResp | 0x08 |
+| LeaveGame | 0x09 |
+| LeaveGameResp | 0x0A |
+| SendMove | 0x0B |
+| SendMoveResp | 0x0C |
+| RecvMove | 0x0D |
+| SendMsg | 0x0E |
+| ShowGame | 0x0F |
+| ShowGameResp | 0x10 |
 
 ---
 ### Error Messages
@@ -103,13 +109,18 @@ be considiered terminated.
 ### Error Codes
 | Op Code | Byte Value |
 |---------|------------|
-| CHESS_ERR_UNK | 0x00 |
-| CHESS_ERR_ILLEGAL_OPCODE | 0x01 |
-| CHESS_ERR_ILLEGAL_LEN | 0x02 |
-| CHESS_ERR_NAME_EXISTS | 0x03 |
-| CHESS_ERR_ILLEGAL_MOVE| 0x04 |
-| CHESS_ERR_TOO_MANY_USERS | 0x05 |
-| CHESS_ERR_TOO_MANY_GAMES | 0x06 |
+| Unk | 0x00 |
+| IllegalOpcode | 0x01 |
+| IllegalLen | 0x02 |
+| NameExists | 0x03 |
+| IllegalMove | 0x04 |
+| UserLimit | 0x05 |
+| GameLimit | 0x06 |
+| BadAddr | 0x07 |
+| AlreadyInGame | 0x08 |
+| GameDoesntExist | 0x09 |
+| MalformedPacket | 0x0A |
+| InvalidAccess | 0x0B |
 
 ---
 ### Keep Alive Messages
@@ -130,4 +141,4 @@ to notify the other party that they are still connected.
 Connection will be terminated upon missing 5 keep alive check-ins.
 
 ## Authors
-Kyle Esquerra [<img style="width: 20px" alt="Github URL" src="https://raw.githubusercontent.com/gilbarbara/logos/1f372be75689d73cae89b6de808149b606b879e1/logos/github-icon.svg">](https://github.com/kesquerra)
+Kyle Esquerra [<img style|"width: 20px" alt|"Github URL" src|"https://raw.githubusercontent.com/gilbarbara/logos/1f372be75689d73cae89b6de808149b606b879e1/logos/github-icon.svg">](https://github.com/kesquerra)
